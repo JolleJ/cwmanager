@@ -35,6 +35,9 @@ function createWindow() {
 
 	mainWindow.loadURL(url);
 
+	mainWindow.setMenu(null);
+	
+
 	mainWindow.on('ready-to-show', () => {
 		mainWindow.show();
 		mainWindow.focus()
