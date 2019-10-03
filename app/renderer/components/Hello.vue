@@ -14,7 +14,7 @@
 			return {
 				nfc: null,
 				readers: null,
-				msg: 'Hello electron-vue-nfc!',
+				msg: 'Cw manager template!',
 			};
 		},
 
