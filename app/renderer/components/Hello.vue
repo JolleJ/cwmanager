@@ -20,8 +20,6 @@
     				</md-field>
 					<md-button class="md-raised">Add</md-button>
 				    <md-button class="md-raised" name="userNfcId" v-on:click="scanCard">Scan</md-button>
-
-					
 			</md-card-content>		
 		</md-card>	
 		</form>
@@ -54,7 +52,7 @@
 		methods: {
 			scanCard: function(event) {
 				
-					this.nfc = new NFC();
+			this.nfc = new NFC();
 			this.readers = new Set();	
 		
 			console.log("Trying to turn on reader");
