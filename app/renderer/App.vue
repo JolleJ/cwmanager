@@ -1,17 +1,17 @@
 <template>
-	<div id='app'>
-		<MainToolbar>
-		</MainToolbar>
-		<LoginPage></LoginPage>
+	<div id='app'>	
+		<MainToolbar></MainToolbar>
+		<router-view/>
 	</div>
 </template>
 
 <script>
 
 	import LoginPage from './components/LoginPage.vue';
-	import Hello from './components/Hello.vue';
 	import MainToolbar from './components/MainToolbar.vue';
-	
+	import Home from "./components/Home.vue";
+	import AddUserPage from "./components/AddUserPage.vue";
+
 	
 
 	// With shell.openExternal(url) is how
@@ -19,10 +19,11 @@
 	const shell = require('electron').shell;
 
 	export default {
+		name: "App",
 		components: {
-			LoginPage,
-			Hello,
 			MainToolbar,
+			LoginPage,
+			Home
 		},
 		methods: {
 			link: (url) => {

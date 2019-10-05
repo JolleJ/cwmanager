@@ -24,8 +24,27 @@ export default {
 				options: {
 					name: '[name].[ext]?[hash]',
 				},
+				
 			},
+			{
+				test: /\.scss$/,
+				use: [
+				  'vue-style-loader',
+				  'css-loader',
+				]
+			  }
+
 		],
+		loaders: [
+			{
+				test: /\.vue$/,
+				loader: 'vue'
+			  }, 
+			  {
+				  test: /\.s[a|c]ss$/,
+				  loader: 'style!css!sass'
+			  }
+		]
 	},
 
 	plugins: [],

@@ -65,3 +65,7 @@ app.on('activate', () => {
 		createWindow();
 	}
 });
+
+const sendMenuEvent = async data => {
+	mainWindow.webContents.send('change-view', data)
+  }

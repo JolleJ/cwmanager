@@ -15,14 +15,18 @@
                 <md-input value="" v-model="login.password" type="password"></md-input>
             </md-field>
         </div>
-        <md-button class="md-raised md-primary" @click="redirect">Login</md-button>
+        <router-link to="/AddUserPage">Login</router-link>
+        <md-button class="md-raised" name="loginButton" ><router-link to="/AddUserPage">About</router-link></md-button>
+        
     </form>
+
   </md-card>
   </div>
 </template>
 
 <script>
 export default {
+    name: "loginPage",
     data() {
         return {
             loading: false,
@@ -33,9 +37,10 @@ export default {
         }
     },
     methods: {
-        redirect: function(event) {
-            this.$router.push('Home')
-        }
+            rerouteLogin: function(event) {
+                this.$router.push({ path: 'replace' })
+            }
+
     }
     
 }

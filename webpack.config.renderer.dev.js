@@ -51,8 +51,31 @@ export default merge(baseConfig, {
 					'css-loader'
 				]
 			},
+			{
+				test: /\.scss$/,
+				use: [
+				  'vue-style-loader',
+				  'css-loader',				 
+				]
+			  }
+
 		],
+		loaders: [
+			{
+				test: /\.vue$/,
+				loader: 'vue'
+			  }, 
+			  {
+				  test: /\.s[a|c]ss$/,
+				  loader: 'style!css!sass'
+			  }
+		]
 	},
+	vue: {
+		loaders: {
+		  scss: 'style!css!sass'
+		},
+	
 
 	plugins: [
 		new webpack.DefinePlugin({
